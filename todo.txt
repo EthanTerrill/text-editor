@@ -1,0 +1,10 @@
+filesystem navigation
+ps commmands
+utils
+plugins
+keybindings
+window frame
+linting
+syntax highlighting
+debugging
+figure outn the issue with wchars
