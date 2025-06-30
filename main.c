@@ -39,6 +39,7 @@ void cleanup(){
 int main(int arg_num, char* argv[]){
 
 
+  char* filename = "output.c";
   setup();
 
 
@@ -52,8 +53,10 @@ int main(int arg_num, char* argv[]){
   string* cursor = &s;
   wchar_t curr = 0;
 
-  char* filename = "output.c";
-  FILE* fo = fopen(filename, "r");
+  if(arg_num == 2) {
+    filename = argv[1];
+  }
+  FILE* fo = fopen(filename, "rw");
   wprintf(L"file open-\n");
   write_file_to_string(&s, &fo);
 
@@ -115,10 +118,6 @@ int main(int arg_num, char* argv[]){
   printf("file open\n");
   write_string_to_file(*(s.next), &ftest);
   fclose(ftest);
-
-
-
-
 
 
 }
