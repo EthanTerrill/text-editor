@@ -32,7 +32,7 @@
 void cleanup() {
   printf("\033[?25h");
   system("clear");
-  tcsetattr(0, TCSANOW, &save);
+  //tcsetattr(0, TCSANOW, &save);
 }
 
 
